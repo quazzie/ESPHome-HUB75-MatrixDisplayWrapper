@@ -102,10 +102,7 @@ async def to_code(config):
         cg.add_library("Wire", None)
         cg.add_library("Adafruit BusIO", None)
         cg.add_library("adafruit/Adafruit GFX Library", None)
-        cg.add_library(
-            "https://github.com/TillFleisch/ESP32-HUB75-MatrixPanel-DMA#optional_logging",
-            None,
-        )
+        cg.add_library("https://github.com/quazzie/ESP32-HUB75-MatrixPanel-DMA", None)
 
     var = cg.new_Pvariable(config[CONF_ID])
     cg.add(var.set_panel_width(config[CONF_WIDTH]))
